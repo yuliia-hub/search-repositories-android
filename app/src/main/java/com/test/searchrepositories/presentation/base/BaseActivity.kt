@@ -16,16 +16,19 @@ abstract class BaseActivity<VB : ViewBinding> : DaggerAppCompatActivity() {
 
     abstract fun inflateViewBinding(): VB
 
+    protected open var containerId: Int? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _viewBinding = inflateViewBinding()
         setContentView(viewBinding.root)
     }
 
-    protected fun changeFragment(fragment: BaseFragment<*>, containerId: Int, withBackStack: Boolean = false) {
-        supportFragmentManager.beginTransaction()
-             .replace(containerId, fragment)
-             .apply { if (withBackStack) addToBackStack(fragment.javaClass.simpleName) }
-             .commit()
-    }
+    protected fun changeFragment(fragment: BaseFragment<*>, withBackStack: Boolean = false) =
+        containerId?.let { id ->
+            supportFragmentManager.beginTransaction()
+                .replace(id, fragment)
+                .apply { if (withBackStack) addToBackStack(fragment.javaClass.simpleName) }
+                .commit()
+        }
 }
