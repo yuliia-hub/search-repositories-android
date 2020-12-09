@@ -1,4 +1,4 @@
-package com.cl75.searchrepositories
+package com.test.searchrepositories
 
 import org.junit.Test
 
