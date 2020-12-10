@@ -66,9 +66,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    private fun showResults(
-        responses: List<ApiResponseModel<ListResponseModel<RepositoryModel>>>
-    ) {
+    private fun showResults(responses: List<ApiResponseModel<ListResponseModel<RepositoryModel>>>) {
         val result = mutableListOf<RepositoryModel>()
         responses.forEach { response ->
             when (response) {
