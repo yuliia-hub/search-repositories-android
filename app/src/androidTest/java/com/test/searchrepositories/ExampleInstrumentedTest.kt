@@ -1,4 +1,4 @@
-package com.cl75.searchrepositories
+package com.test.searchrepositories
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
