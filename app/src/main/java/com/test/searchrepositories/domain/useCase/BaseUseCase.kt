@@ -1,4 +1,4 @@
-package com.test.searchrepositories.presentation.base
+package com.test.searchrepositories.domain.useCase
 
 import com.test.searchrepositories.data.network.api.ApiResponseModel
 

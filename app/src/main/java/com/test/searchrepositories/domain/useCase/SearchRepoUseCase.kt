@@ -4,7 +4,6 @@ import com.test.searchrepositories.data.models.server.ListResponseModel
 import com.test.searchrepositories.data.models.server.RepositoryModel
 import com.test.searchrepositories.data.network.api.ApiResponseModel
 import com.test.searchrepositories.domain.repository.IRepoRepository
-import com.test.searchrepositories.presentation.base.BaseUseCase
 import javax.inject.Inject
 
 class SearchRepoUseCase @Inject constructor(
