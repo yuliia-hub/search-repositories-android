@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.test.searchrepositories.databinding.FragmentSearchRepositoriesBinding
 import com.test.searchrepositories.presentation.base.BaseFragment
+import com.test.searchrepositories.presentation.base.BaseViewModel
 import com.test.searchrepositories.presentation.search.adapter.RepositoriesResultAdapter
 
 class SearchFragment: BaseFragment<FragmentSearchRepositoriesBinding>() {
@@ -30,6 +31,8 @@ class SearchFragment: BaseFragment<FragmentSearchRepositoriesBinding>() {
 
     override fun bindViewBinding(inflater: LayoutInflater, container: ViewGroup?) =
         FragmentSearchRepositoriesBinding.inflate(inflater, container, false)
+
+    override fun getBaseViewModel(): BaseViewModel? = viewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

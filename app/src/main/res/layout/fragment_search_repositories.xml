@@ -8,15 +8,14 @@
         android:id="@+id/fSearchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_20"
-        android:layout_marginVertical="@dimen/margin_10"
+        android:layout_margin="@dimen/margin_10"
         app:closeIcon="@android:drawable/ic_menu_close_clear_cancel"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fSearchRv"
-        app:queryHint="@string/search_places"
+        app:queryHint="@string/repository"
         app:searchIcon="@android:drawable/ic_search_category_default" />
 
     <androidx.recyclerview.widget.RecyclerView

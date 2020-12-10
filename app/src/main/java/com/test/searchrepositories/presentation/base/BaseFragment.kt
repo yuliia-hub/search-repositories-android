@@ -29,10 +29,19 @@ abstract class BaseFragment<VB : ViewBinding> : DaggerFragment() {
         return viewBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        getBaseViewModel()?.apply {
+            errorEvent.observe(viewLifecycleOwner, { showErrorToast(it) })
+        }
+    }
+
     override fun onDestroyView() {
         _viewBinding = null
         super.onDestroyView()
     }
+
+    open fun getBaseViewModel(): BaseViewModel? = null
 
     abstract fun bindViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
 

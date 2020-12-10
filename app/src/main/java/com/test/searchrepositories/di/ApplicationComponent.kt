@@ -5,6 +5,7 @@ import android.content.Context
 import com.test.searchrepositories.di.module.ActivityModule
 import com.test.searchrepositories.di.module.ApplicationModule
 import com.test.searchrepositories.di.module.NetworkModule
+import com.test.searchrepositories.di.module.RepositoryModule
 import com.test.searchrepositories.presentation.SearchRepositoriesApp
 import dagger.BindsInstance
 import dagger.Component
@@ -17,7 +18,7 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class, NetworkModule::class,
-        ActivityModule::class, ApplicationModule::class
+        ActivityModule::class, ApplicationModule::class, RepositoryModule::class
     ]
 )
 interface ApplicationComponent : AndroidInjector<SearchRepositoriesApp> {
